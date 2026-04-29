@@ -1,0 +1,21 @@
+import os
+from dataclasses import dataclass
+os.system("cls")
+
+@dataclass
+class Fornecedor:
+    nome: str
+    email: str
+    telefone: int
+    endereço: str
+
+# Uso da classe
+print("======= Solicitando dados do fornecedor =======")
+fornecedor = Fornecedor(
+    nome=input("Digite o nome do fornecedor: "),
+    email=input("Digite o email do fornecedor: "),
+    telefone=int(input("Digite o telefone do fornecedor: ")),
+    endereço=input("Digite o endereço do fornecedor: ")
+)
+print(f"------Exibindo dados do fornecedor-------")
+print(f"Nome: {fornecedor.nome}\nEmail: {fornecedor.email}\nTelefone: {fornecedor.telefone}\nEndereço: {fornecedor.endereço}")
